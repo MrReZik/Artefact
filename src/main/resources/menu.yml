@@ -1,0 +1,56 @@
+# menu.yml
+
+menu:
+  # Используем HEX-код <#RRGGBB>
+  title: "<#AA0000>Обмен Артефактов"
+  size: 27 # 3 ряда
+  items:
+    # -----------------------------------------------------
+    # ПРИМЕЧАНИЕ: Это НЕ DeluxeMenus. Это очень простой парсер.
+    # Доступные действия для 'click_action':
+    #
+    # 1. EXCHANGE_ARTEFACT
+    #    (Специальное действие) Запускает логику обмена артефакта
+    #    с курсора на валюту (Vault или PlayerPoints).
+    #
+    # 2. [close]
+    #    (Новое) Просто закрывает меню.
+    #
+    # 3. [message] <текст>
+    #    (Новое) Отправляет игроку сообщение в чат.
+    #    Пример: [message] &aВы нажали на кнопку!
+    # -----------------------------------------------------
+
+    # Декоративное стекло по краям
+    'border_dark':
+      material: "BLACK_STAINED_GLASS_PANE"
+      display_name: " "
+      # Слоты по краям
+      slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+
+    'border_red':
+      material: "RED_STAINED_GLASS_PANE"
+      display_name: " "
+      # Слоты вокруг кнопки
+      slots: [10, 11, 12, 14, 15, 16]
+
+
+    # Кнопка для обмена
+    'exchange_button':
+      material: "EMERALD_BLOCK"
+      slot: 13 # Центральный слот
+      display_name: "<#55FF55>Обменять Артефакт"
+      lore:
+        - "<#FFFFFF>Нажмите сюда, держа артефакт"
+        - "<#FFFFFF>на курсоре, чтобы обменять его"
+        - "<#FFFFFF>на <#FFFF55>очки<#FFFFFF> или <#55FF55>монеты<#FFFFFF>."
+      click_action: "EXCHANGE_ARTEFACT"
+
+    # Кнопка закрытия (перемещена в угол)
+    'close_button':
+      material: "BARRIER"
+      slot: 22 # Правый нижний угол в рамке
+      display_name: "<#FF5555>Закрыть"
+      lore:
+        - "<#AAAAAA>Выйти из меню."
+      click_action: "[close]"

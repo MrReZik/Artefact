@@ -1,0 +1,13 @@
+name: Artefacts
+version: '${version}'
+main: com.mrrezik.artefact.Artefact
+api-version: 1.17
+author: MrReZik (Thank you Gomania)
+description: Artefact exchange plugin
+softdepend: [PlayerPoints, Vault] # ИЗМЕНЕНО: Добавлен Vault
+
+commands:
+  artefact:
+    description: "Main command for Artefacts plugin"
+    usage: "/artefact give <name> <player> <amount>" # Убрал <value>
+    aliases: [art]
